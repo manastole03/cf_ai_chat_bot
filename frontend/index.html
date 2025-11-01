@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Assistant - AI Chat</title>
+  <meta name="description" content="AI-powered conversational assistant with memory, powered by Llama 3.3 on Cloudflare" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="chat-container">
+    <header class="chat-header">
+      <h1>💬 Smart Assistant</h1>
+      <p>Powered by Llama 3.3 on Cloudflare Workers AI</p>
+    </header>
+
+    <section class="chat-status" id="status">Connecting...</section>
+
+    <section class="chat-messages" id="messages">
+      <div class="chat-info">
+        <strong>Commands:</strong> /name &lt;name&gt; | /history | /clear
+      </div>
+    </section>
+
+    <footer class="chat-input">
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Type your message..."
+        disabled
+        autocomplete="off"
+      />
+      <button id="sendButton" disabled>Send</button>
+    </footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
