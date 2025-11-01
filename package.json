@@ -1,0 +1,28 @@
+{
+  "name": "cf_ai_smart_assistant",
+  "version": "1.0.0",
+  "description": "AI-powered conversational assistant with memory using Cloudflare Workers AI and Durable Objects",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "ai",
+    "llama",
+    "chat",
+    "durable-objects"
+  ],
+  "author": "Aswin Surya",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251011.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.43.0"
+  },
+  "dependencies": {
+    "agents": "^0.2.14"
+  }
+}

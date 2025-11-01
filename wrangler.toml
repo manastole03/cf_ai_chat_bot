@@ -1,0 +1,27 @@
+name = "cf-ai-smart-assistant"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Enable Workers AI binding
+ai = { binding = "AI" }
+
+# Durable Object configuration for the Smart Assistant agent
+[[durable_objects.bindings]]
+name = "SMART_ASSISTANT"
+class_name = "SmartAssistant"
+
+
+
+# Migration for Durable Object with SQLite enabled (required by Agents SDK)
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["SmartAssistant"]
+
+[build]
+command = ""
+
+# Uncomment to deploy with custom domain
+# [[routes]]
+# pattern = "assistant.example.com"
+# custom_domain = true
